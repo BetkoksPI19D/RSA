@@ -141,13 +141,88 @@ namespace RSAAlgorithm
 
             foreach (int a in publicKey)
             {
-                using (StreamWriter writer = new StreamWriter(@"C:\Users\njusC:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\key.txt", true))
+                using (StreamWriter writer = new StreamWriter(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\key.txt", true))
                 {
                     writer.WriteLine(a);
                 }
             }
 
             return publicKey;
+        }
+
+        private List<int> Encryption()
+        {
+            List<int> msg = new List<int>();
+            List<int> encryptedMsg = new List<int>();
+            List<int> publicKey = new List<int>();
+            string line;
+
+            StreamReader file = new StreamReader(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\key.txt");
+            while ((line = file.ReadLine()) != null)
+            {
+                publicKey.Add(Convert.ToInt32(line));
+
+            }
+
+            foreach (char l in PrimaryTextBox.Text)
+            {
+                msg.Add(l % 128);
+            }
+
+            foreach (int n in msg)
+            {
+                BigInteger big = BigInteger.Pow(n, publicKey[1]);
+                int enc = (int)(big % publicKey[0]);
+                encryptedMsg.Add(enc);
+            }
+
+            return encryptedMsg;
+        }
+
+        private List<int> Decryption()
+        {
+            n = getN();
+            D = privateKey();
+            string line;
+            string messg = null;
+            List<int> encryptedMsg = new List<int>();
+            StreamReader file = new StreamReader(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\text.txt");
+            while ((line = file.ReadLine()) != null)
+            {
+                messg = line;
+
+            }
+
+            foreach (char l in messg)
+            {
+                encryptedMsg.Add(l % 128);
+            }
+
+
+            List<int> decryptedMsgInt = new List<int>();
+            foreach (int num in encryptedMsg)
+            {
+                BigInteger big = BigInteger.Pow(num, D);
+                int dec = (int)(big % n);
+                decryptedMsgInt.Add(dec);
+            }
+
+            return decryptedMsgInt;
+        }
+
+        private void EncryptButton_Click(object sender, EventArgs e)
+        {
+            List<int> publicKeys = publicKey();
+            encryptedMsg = Encryption();
+            string messageEnc = null;
+
+            foreach (int a in encryptedMsg)
+            {
+                byte[] numbers = { (byte)a };
+                messageEnc += encoding.GetString(numbers);
+            }
+            File.WriteAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\text.txt", messageEnc);
+            EncryptedResultBox.Text = messageEnc;
         }
     }
 }

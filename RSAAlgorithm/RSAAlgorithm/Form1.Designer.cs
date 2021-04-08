@@ -48,8 +48,8 @@
             this.nTextBox = new System.Windows.Forms.TextBox();
             this.FiTextBox = new System.Windows.Forms.TextBox();
             this.DecryptedResultBox = new System.Windows.Forms.TextBox();
-            this.EncryptedResultBox = new System.Windows.Forms.RichTextBox();
             this.EncryptedTextBox = new System.Windows.Forms.RichTextBox();
+            this.EncryptedResultBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -111,6 +111,7 @@
             this.EncryptButton.TabIndex = 6;
             this.EncryptButton.Text = "Encrypt";
             this.EncryptButton.UseVisualStyleBackColor = true;
+            this.EncryptButton.Click += new System.EventHandler(this.EncryptButton_Click);
             // 
             // label4
             // 
@@ -224,14 +225,6 @@
             this.DecryptedResultBox.Size = new System.Drawing.Size(215, 22);
             this.DecryptedResultBox.TabIndex = 11;
             // 
-            // EncryptedResultBox
-            // 
-            this.EncryptedResultBox.Location = new System.Drawing.Point(120, 254);
-            this.EncryptedResultBox.Name = "EncryptedResultBox";
-            this.EncryptedResultBox.Size = new System.Drawing.Size(202, 96);
-            this.EncryptedResultBox.TabIndex = 22;
-            this.EncryptedResultBox.Text = "";
-            // 
             // EncryptedTextBox
             // 
             this.EncryptedTextBox.Location = new System.Drawing.Point(538, 41);
@@ -240,13 +233,20 @@
             this.EncryptedTextBox.TabIndex = 23;
             this.EncryptedTextBox.Text = "";
             // 
+            // EncryptedResultBox
+            // 
+            this.EncryptedResultBox.Location = new System.Drawing.Point(120, 254);
+            this.EncryptedResultBox.Name = "EncryptedResultBox";
+            this.EncryptedResultBox.Size = new System.Drawing.Size(202, 22);
+            this.EncryptedResultBox.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 375);
-            this.Controls.Add(this.EncryptedTextBox);
+            this.ClientSize = new System.Drawing.Size(753, 302);
             this.Controls.Add(this.EncryptedResultBox);
+            this.Controls.Add(this.EncryptedTextBox);
             this.Controls.Add(this.FiTextBox);
             this.Controls.Add(this.nTextBox);
             this.Controls.Add(this.DTextBox);
@@ -296,8 +296,8 @@
         private System.Windows.Forms.TextBox nTextBox;
         private System.Windows.Forms.TextBox FiTextBox;
         private System.Windows.Forms.TextBox DecryptedResultBox;
-        private System.Windows.Forms.RichTextBox EncryptedResultBox;
         private System.Windows.Forms.RichTextBox EncryptedTextBox;
+        private System.Windows.Forms.TextBox EncryptedResultBox;
     }
 }
 

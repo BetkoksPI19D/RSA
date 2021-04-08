@@ -1,0 +1,9 @@
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\RSAAlgorithm\RSAAlgorithm\bin\Debug\RSAAlgorithm.exe.config
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\RSAAlgorithm\RSAAlgorithm\bin\Debug\RSAAlgorithm.exe
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\RSAAlgorithm\RSAAlgorithm\bin\Debug\RSAAlgorithm.pdb
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\RSAAlgorithm\RSAAlgorithm\obj\Debug\RSAAlgorithm.csprojAssemblyReference.cache
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\RSAAlgorithm\RSAAlgorithm\obj\Debug\RSAAlgorithm.Form1.resources
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\RSAAlgorithm\RSAAlgorithm\obj\Debug\RSAAlgorithm.Properties.Resources.resources
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\RSAAlgorithm\RSAAlgorithm\obj\Debug\RSAAlgorithm.csproj.GenerateResource.cache
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\RSAAlgorithm\RSAAlgorithm\obj\Debug\RSAAlgorithm.exe
+C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\RSAAlgorithm\RSAAlgorithm\obj\Debug\RSAAlgorithm.pdb
