@@ -44,8 +44,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.DecryptedResultBox = new System.Windows.Forms.TextBox();
-            this.EncryptedTextBox = new System.Windows.Forms.RichTextBox();
             this.EncryptedResultBox = new System.Windows.Forms.TextBox();
+            this.EncryptedTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ClearKeyFile = new System.Windows.Forms.Button();
+            this.ClearTextFile = new System.Windows.Forms.Button();
+            this.eLabel = new System.Windows.Forms.Label();
+            this.nLabel = new System.Windows.Forms.Label();
+            this.FiLabel = new System.Windows.Forms.Label();
+            this.DLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -121,7 +128,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(430, 44);
+            this.label5.Location = new System.Drawing.Point(430, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 17);
             this.label5.TabIndex = 9;
@@ -129,7 +136,7 @@
             // 
             // DecryptButton
             // 
-            this.DecryptButton.Location = new System.Drawing.Point(654, 194);
+            this.DecryptButton.Location = new System.Drawing.Point(654, 90);
             this.DecryptButton.Name = "DecryptButton";
             this.DecryptButton.Size = new System.Drawing.Size(75, 28);
             this.DecryptButton.TabIndex = 12;
@@ -140,7 +147,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(430, 241);
+            this.label6.Location = new System.Drawing.Point(430, 152);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 17);
             this.label6.TabIndex = 13;
@@ -184,19 +191,11 @@
             // 
             // DecryptedResultBox
             // 
-            this.DecryptedResultBox.Location = new System.Drawing.Point(514, 236);
+            this.DecryptedResultBox.Location = new System.Drawing.Point(514, 152);
             this.DecryptedResultBox.MaxLength = 3276765;
             this.DecryptedResultBox.Name = "DecryptedResultBox";
             this.DecryptedResultBox.Size = new System.Drawing.Size(215, 22);
             this.DecryptedResultBox.TabIndex = 11;
-            // 
-            // EncryptedTextBox
-            // 
-            this.EncryptedTextBox.Location = new System.Drawing.Point(538, 41);
-            this.EncryptedTextBox.Name = "EncryptedTextBox";
-            this.EncryptedTextBox.Size = new System.Drawing.Size(191, 147);
-            this.EncryptedTextBox.TabIndex = 23;
-            this.EncryptedTextBox.Text = "";
             // 
             // EncryptedResultBox
             // 
@@ -205,13 +204,89 @@
             this.EncryptedResultBox.Size = new System.Drawing.Size(202, 22);
             this.EncryptedResultBox.TabIndex = 24;
             // 
+            // EncryptedTextBox
+            // 
+            this.EncryptedTextBox.Location = new System.Drawing.Point(539, 62);
+            this.EncryptedTextBox.Name = "EncryptedTextBox";
+            this.EncryptedTextBox.Size = new System.Drawing.Size(190, 22);
+            this.EncryptedTextBox.TabIndex = 25;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(601, 26);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 23);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Paste from file";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ClearKeyFile
+            // 
+            this.ClearKeyFile.Location = new System.Drawing.Point(433, 234);
+            this.ClearKeyFile.Name = "ClearKeyFile";
+            this.ClearKeyFile.Size = new System.Drawing.Size(112, 42);
+            this.ClearKeyFile.TabIndex = 27;
+            this.ClearKeyFile.Text = "Clear key file";
+            this.ClearKeyFile.UseVisualStyleBackColor = true;
+            this.ClearKeyFile.Click += new System.EventHandler(this.ClearKeyFile_Click);
+            // 
+            // ClearTextFile
+            // 
+            this.ClearTextFile.Location = new System.Drawing.Point(551, 234);
+            this.ClearTextFile.Name = "ClearTextFile";
+            this.ClearTextFile.Size = new System.Drawing.Size(112, 42);
+            this.ClearTextFile.TabIndex = 28;
+            this.ClearTextFile.Text = "Clear text file";
+            this.ClearTextFile.UseVisualStyleBackColor = true;
+            this.ClearTextFile.Click += new System.EventHandler(this.ClearTextFile_Click);
+            // 
+            // eLabel
+            // 
+            this.eLabel.AutoSize = true;
+            this.eLabel.Location = new System.Drawing.Point(59, 101);
+            this.eLabel.Name = "eLabel";
+            this.eLabel.Size = new System.Drawing.Size(0, 17);
+            this.eLabel.TabIndex = 29;
+            // 
+            // nLabel
+            // 
+            this.nLabel.AutoSize = true;
+            this.nLabel.Location = new System.Drawing.Point(59, 129);
+            this.nLabel.Name = "nLabel";
+            this.nLabel.Size = new System.Drawing.Size(0, 17);
+            this.nLabel.TabIndex = 30;
+            // 
+            // FiLabel
+            // 
+            this.FiLabel.AutoSize = true;
+            this.FiLabel.Location = new System.Drawing.Point(59, 157);
+            this.FiLabel.Name = "FiLabel";
+            this.FiLabel.Size = new System.Drawing.Size(0, 17);
+            this.FiLabel.TabIndex = 31;
+            // 
+            // DLabel
+            // 
+            this.DLabel.AutoSize = true;
+            this.DLabel.Location = new System.Drawing.Point(244, 103);
+            this.DLabel.Name = "DLabel";
+            this.DLabel.Size = new System.Drawing.Size(0, 17);
+            this.DLabel.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 302);
-            this.Controls.Add(this.EncryptedResultBox);
+            this.Controls.Add(this.DLabel);
+            this.Controls.Add(this.FiLabel);
+            this.Controls.Add(this.nLabel);
+            this.Controls.Add(this.eLabel);
+            this.Controls.Add(this.ClearTextFile);
+            this.Controls.Add(this.ClearKeyFile);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.EncryptedTextBox);
+            this.Controls.Add(this.EncryptedResultBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -253,8 +328,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox DecryptedResultBox;
-        private System.Windows.Forms.RichTextBox EncryptedTextBox;
         private System.Windows.Forms.TextBox EncryptedResultBox;
+        private System.Windows.Forms.TextBox EncryptedTextBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ClearKeyFile;
+        private System.Windows.Forms.Button ClearTextFile;
+        private System.Windows.Forms.Label eLabel;
+        private System.Windows.Forms.Label nLabel;
+        private System.Windows.Forms.Label FiLabel;
+        private System.Windows.Forms.Label DLabel;
     }
 }
 

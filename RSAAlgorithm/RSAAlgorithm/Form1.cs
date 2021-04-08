@@ -219,6 +219,11 @@ namespace RSAAlgorithm
             }
             File.WriteAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\text.txt", messageEnc);
             EncryptedResultBox.Text = messageEnc;
+            eLabel.Text = getE().ToString();
+            nLabel.Text = getN().ToString();
+            FiLabel.Text = getFi().ToString();
+            DLabel.Text = privateKey().ToString();
+
         }
 
         private void DecryptButton_Click(object sender, EventArgs e)
@@ -228,10 +233,27 @@ namespace RSAAlgorithm
 
             foreach (int a in decryptedMsg)
             {
-                byte[] num = { (byte)a };
+                byte[] num = { (byte)a }; 
                 message += encoding.GetString(num);
             }
             DecryptedResultBox.Text = message;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string text = File.ReadAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\text.txt");
+            EncryptedTextBox.Text = text;
+        }
+
+        private void ClearKeyFile_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\key.txt", String.Empty);
+        }
+
+        private void ClearTextFile_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(@"C:\Users\njusp\OneDrive - Vilniaus kolegija\2 kursas\Informacijos Saugumas\RSA\text.txt", String.Empty);
+
         }
     }
 }
