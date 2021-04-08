@@ -43,10 +43,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.eTextBox = new System.Windows.Forms.TextBox();
-            this.DTextBox = new System.Windows.Forms.TextBox();
-            this.nTextBox = new System.Windows.Forms.TextBox();
-            this.FiTextBox = new System.Windows.Forms.TextBox();
             this.DecryptedResultBox = new System.Windows.Forms.TextBox();
             this.EncryptedTextBox = new System.Windows.Forms.RichTextBox();
             this.EncryptedResultBox = new System.Windows.Forms.TextBox();
@@ -139,6 +135,7 @@
             this.DecryptButton.TabIndex = 12;
             this.DecryptButton.Text = "Decrypt";
             this.DecryptButton.UseVisualStyleBackColor = true;
+            this.DecryptButton.Click += new System.EventHandler(this.DecryptButton_Click);
             // 
             // label6
             // 
@@ -185,38 +182,6 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "D=";
             // 
-            // eTextBox
-            // 
-            this.eTextBox.Location = new System.Drawing.Point(62, 101);
-            this.eTextBox.MaxLength = 3276765;
-            this.eTextBox.Name = "eTextBox";
-            this.eTextBox.Size = new System.Drawing.Size(70, 22);
-            this.eTextBox.TabIndex = 18;
-            // 
-            // DTextBox
-            // 
-            this.DTextBox.Location = new System.Drawing.Point(252, 101);
-            this.DTextBox.MaxLength = 3276765;
-            this.DTextBox.Name = "DTextBox";
-            this.DTextBox.Size = new System.Drawing.Size(70, 22);
-            this.DTextBox.TabIndex = 19;
-            // 
-            // nTextBox
-            // 
-            this.nTextBox.Location = new System.Drawing.Point(62, 129);
-            this.nTextBox.MaxLength = 3276765;
-            this.nTextBox.Name = "nTextBox";
-            this.nTextBox.Size = new System.Drawing.Size(70, 22);
-            this.nTextBox.TabIndex = 20;
-            // 
-            // FiTextBox
-            // 
-            this.FiTextBox.Location = new System.Drawing.Point(62, 156);
-            this.FiTextBox.MaxLength = 3276765;
-            this.FiTextBox.Name = "FiTextBox";
-            this.FiTextBox.Size = new System.Drawing.Size(70, 22);
-            this.FiTextBox.TabIndex = 21;
-            // 
             // DecryptedResultBox
             // 
             this.DecryptedResultBox.Location = new System.Drawing.Point(514, 236);
@@ -247,10 +212,6 @@
             this.ClientSize = new System.Drawing.Size(753, 302);
             this.Controls.Add(this.EncryptedResultBox);
             this.Controls.Add(this.EncryptedTextBox);
-            this.Controls.Add(this.FiTextBox);
-            this.Controls.Add(this.nTextBox);
-            this.Controls.Add(this.DTextBox);
-            this.Controls.Add(this.eTextBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -291,10 +252,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox eTextBox;
-        private System.Windows.Forms.TextBox DTextBox;
-        private System.Windows.Forms.TextBox nTextBox;
-        private System.Windows.Forms.TextBox FiTextBox;
         private System.Windows.Forms.TextBox DecryptedResultBox;
         private System.Windows.Forms.RichTextBox EncryptedTextBox;
         private System.Windows.Forms.TextBox EncryptedResultBox;
